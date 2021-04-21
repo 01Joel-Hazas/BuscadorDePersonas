@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import PersonaForm from "./AppPersonas";
+import DetallesForm from "./DetallesPersonas";
+import Menu from "./Menu";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Menu></Menu>
+        <header className="App-header">
+          <Switch>
+            <Route path="/" component={PersonaForm} exact />
+            <Route path="/DetallesPersonas" component={DetallesForm} exact />
+          </Switch>
+        </header>
+      </div>
+    </BrowserRouter>
   );
 }
 
