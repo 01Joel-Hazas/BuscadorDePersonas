@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
-import Logo from "./logoBiko.png";
+import Logo from "../images/logoBiko.png";
 
 function Menu() {
   return (
@@ -11,7 +11,7 @@ function Menu() {
       </h1>
 
       <p className="text-center" id="redParagraph">
-        (lorem ipsum dolor set
+        (lorem ipsum dolor set)
       </p>
       <p className="text-center" id="normalParagraph">
         {" "}

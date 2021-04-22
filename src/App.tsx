@@ -1,7 +1,7 @@
-import PersonaForm from "./AppPersonas";
-import DetallesForm from "./DetallesPersonas";
-import Menu from "./Menu";
-import "./styles.css";
+import PersonaForm from "./pages/AppPersonas";
+import DetallesForm from "./pages/DetallesPersonas";
+import Menu from "./pages/Menu";
+import "./styles/styles.css";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 function App() {
   return (

@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
-import "./cardHover.css";
+import "../styles/cardHover.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -93,15 +93,21 @@ function PersonaForm() {
                 style={{ width: "200px", height: "200px" }}
               />
 
-              <Link
-                to={{
-                  pathname: "/DetallesPersonas",
-                  state: { persona: persona },
-                }}
-                className="btn btn-primary"
-              >
-                Detalles
-              </Link>
+              <div className="card-body">
+                <h6>{persona["Nombre"]}</h6>
+                <h6>{persona["Apellidos"]}</h6>
+                <p>{persona["Rol"]}</p>
+                <div>
+                  <Link
+                    to={{
+                      pathname: "/DetallesPersonas",
+                      state: { persona: persona },
+                    }}
+                  >
+                    Detalles
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         );
