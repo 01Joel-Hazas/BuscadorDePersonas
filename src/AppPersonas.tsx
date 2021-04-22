@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.css";
+import "./cardHover.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import ReactDOM from "react-dom";
 
 function PersonaForm() {
   const [personsData, setpersonsData] = useState<any[]>([]);
@@ -20,11 +22,11 @@ function PersonaForm() {
   function filterSearchedData(searchData: any) {
     let searchingPersons: any[] = [];
     personsData.map((person) => {
-      if (person["name"].toString().toLowerCase().includes(searchData)) {
+      if (person["Nombre"].toString().toLowerCase().includes(searchData)) {
         searchingPersons.push(person);
         setHasError(false);
-        // @ts-ignore: Object is possibly 'null'.
-        document.getElementById("errorMessage").innerHTML = "";
+        let errorItem: any = <p></p>;
+        ReactDOM.render(errorItem, document.getElementById("errorMessage"));
         setHasValue(true);
       }
     });
@@ -48,15 +50,21 @@ function PersonaForm() {
               style={{ width: "200px", height: "200px" }}
             />
 
-            <Link
-              to={{
-                pathname: "/DetallesPersonas",
-                state: { persona: persona },
-              }}
-              className="btn btn-primary"
-            >
-              Detalles
-            </Link>
+            <div className="card-body">
+              <h6>{persona["Nombre"]}</h6>
+              <h6>{persona["Apellidos"]}</h6>
+              <p>{persona["Rol"]}</p>
+              <div>
+                <Link
+                  to={{
+                    pathname: "/DetallesPersonas",
+                    state: { persona: persona },
+                  }}
+                >
+                  Detalles
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       );
@@ -66,8 +74,8 @@ function PersonaForm() {
 
   function showErrorMessage() {
     let errorMessage = "No se ha encontrado ningúna persona con ese criterio";
-    // @ts-ignore: Object is possibly 'null'.
-    document.getElementById("errorMessage").innerHTML = errorMessage;
+    let errorItem: any = <p>{errorMessage}</p>;
+    ReactDOM.render(errorItem, document.getElementById("errorMessage"));
   }
 
   function printSearchedPeople() {
@@ -108,7 +116,7 @@ function PersonaForm() {
         <input
           type="text"
           className="form-control"
-          placeholder="Buscar aqui"
+          placeholder="Nombre Bikoniano"
           onChange={(event) => {
             filterSearchedData(event.target.value);
           }}

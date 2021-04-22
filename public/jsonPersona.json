@@ -1,23 +1,608 @@
 [
   {
-    "id": "ZmGrkLRPXOTpxsU4jjAcv",
-    "name": "Joel Hazas Erburu",
-    "date": 2021,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum tempus turpis, id feugiat dolor vulputate sit amet. Nullam consectetur nulla ac dolor luctus, nec tempor neque auctor. Suspendisse gravida nulla eget magna egestas sagittis. In hac habitasse platea dictumst. Donec vel eros sem. Nam id ante purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum bibendum orci vitae diam interdum, ut aliquet ipsum tincidunt. Vestibulum et metus vehicula tortor mattis venenatis nec vel neque. Aliquam auctor odio vel ipsum lobortis hendrerit. Vivamus dictum enim diam, quis blandit velit efficitur sit amet. Vivamus rutrum sit amet erat eget finibus. Proin auctor fermentum ex non varius. Cras tempus leo ultricies mauris cursus porta.",
-    "imgUrl": "https://www.pngkey.com/png/detail/521-5214782_alexander-ariel-placeholder-person.png"
+    "Nombre": "UJUE",
+    "Apellidos": "AGUDO DIAZ",
+    "Equipo": "14 BIKOLABS",
+    "Rol": "Consultor UX",
+    "Fecha incorporación a Biko": "03/07/2000",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
   },
   {
-    "id": "ZmGrkLRPXOTpxsU4jjAcv",
-    "name": "Ekaitz Torregrosa Ruiz",
-    "date": 2021,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum tempus turpis, id feugiat dolor vulputate sit amet. Nullam consectetur nulla ac dolor luctus, nec tempor neque auctor. Suspendisse gravida nulla eget magna egestas sagittis. In hac habitasse platea dictumst. Donec vel eros sem. Nam id ante purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum bibendum orci vitae diam interdum, ut aliquet ipsum tincidunt. Vestibulum et metus vehicula tortor mattis venenatis nec vel neque. Aliquam auctor odio vel ipsum lobortis hendrerit. Vivamus dictum enim diam, quis blandit velit efficitur sit amet. Vivamus rutrum sit amet erat eget finibus. Proin auctor fermentum ex non varius. Cras tempus leo ultricies mauris cursus porta.",
-    "imgUrl": "https://images.assetsdelivery.com/thumbnails/apoev/apoev1903/apoev190300009.jpg"
+    "Nombre": "ANA",
+    "Apellidos": "ALONSO GOMEZ",
+    "Equipo": "12 ESTRUCTURA",
+    "Rol": "Administración",
+    "Fecha incorporación a Biko": "1/10/2002",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
   },
   {
-    "id": "ZmGrkLRPXOTpxsU4jjAcv",
-    "name": "Unai Elizondo Urrutia",
-    "date": 2021,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum tempus turpis, id feugiat dolor vulputate sit amet. Nullam consectetur nulla ac dolor luctus, nec tempor neque auctor. Suspendisse gravida nulla eget magna egestas sagittis. In hac habitasse platea dictumst. Donec vel eros sem. Nam id ante purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum bibendum orci vitae diam interdum, ut aliquet ipsum tincidunt. Vestibulum et metus vehicula tortor mattis venenatis nec vel neque. Aliquam auctor odio vel ipsum lobortis hendrerit. Vivamus dictum enim diam, quis blandit velit efficitur sit amet. Vivamus rutrum sit amet erat eget finibus. Proin auctor fermentum ex non varius. Cras tempus leo ultricies mauris cursus porta.",
+    "Nombre": "JOSU",
+    "Apellidos": "ALZUETA",
+    "Equipo": "13 OPENBANK",
+    "Rol": "Desarrollador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ENRIQUE",
+    "Apellidos": "ARBUINES BURGUETE",
+    "Equipo": "13 OPENBANK",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "20/03/2017",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "JAVIER",
+    "Apellidos": "AZCONA CABESTRERO",
+    "Equipo": "\n08 LOS CURRIS",
+    "Rol": "Diseño grafico",
+    "Fecha incorporación a Biko": "25/10/2001",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "LAURA",
+    "Apellidos": "AZCONA EGUINOA",
+    "Equipo": "\n04 HAL9000",
+    "Rol": "Marketing y Mantenimiento Web",
+    "Fecha incorporación a Biko": "11/04/2017",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "CAROLINA",
+    "Apellidos": "BARCELO OLIVER",
+    "Equipo": "\n11 ECI",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "03/01/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MARIA",
+    "Apellidos": "BARRIOS GARCIA DE GALDEANO",
+    "Equipo": "\n03 ZARA",
+    "Rol": "Maquetación",
+    "Fecha incorporación a Biko": "20/06/2008",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "RUBEN",
+    "Apellidos": "BERNARDEZ PATIER",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "26/11/2007",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "OIER",
+    "Apellidos": "BRAVO URTASUN",
+    "Equipo": "15 GENIALLY",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "09/01/2017",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MIRIAM",
+    "Apellidos": "CALVO MOLINA",
+    "Equipo": "\n02 IMPLANTS",
+    "Rol": "Implant Cetelem",
+    "Fecha incorporación a Biko": "10/01/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ANA",
+    "Apellidos": "CALVO",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "DIEGO",
+    "Apellidos": "CENZANO",
+    "Equipo": "12 ESTRUCTURA",
+    "Rol": "Gerencia",
+    "Fecha incorporación a Biko": "01/09/1997",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ASIER",
+    "Apellidos": "CHORDA",
+    "Equipo": "\n07 ALL BLACKS",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "IÑIGO",
+    "Apellidos": "CILVETI",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Desarrollador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "SILVIA",
+    "Apellidos": "DE MIGUEL PEREZ",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "21/10/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "IÑIGO",
+    "Apellidos": "DIAZ DE CERIO GUTIERREZ",
+    "Equipo": "\n07 ALL BLACKS",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "23/03/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "IRENE",
+    "Apellidos": "DOMENCH SORBET",
+    "Equipo": "\n08 LOS CURRIS",
+    "Rol": "Product owner",
+    "Fecha incorporación a Biko": "18/09/2006",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "VICTOR",
+    "Apellidos": "DORADO ASENSIO",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "16/07/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "IÑAKI",
+    "Apellidos": "ECHANDI DOMEÑO",
+    "Equipo": "\n07 ALL BLACKS",
+    "Rol": "Product owner",
+    "Fecha incorporación a Biko": "02/09/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "VIRGILIO",
+    "Apellidos": "ECHAURI JIMENEZ",
+    "Equipo": "\n11 ECI",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "03/07/2000",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MIGUEL",
+    "Apellidos": "ECHAVARRI",
+    "Equipo": "15 GENIALLY",
+    "Rol": "Desarrollador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "AMAYA",
+    "Apellidos": "EGUIZABAL LASHERAS",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Diseño grafico",
+    "Fecha incorporación a Biko": "23/05/2005",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "DANIEL",
+    "Apellidos": "EGUZKIZA ETXARRI",
+    "Equipo": "\n11 ECI",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "18/07/2005",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "AMAIA",
+    "Apellidos": "ELIZALDE INSAUSTI",
+    "Equipo": "12 ESTRUCTURA",
+    "Rol": "Administración",
+    "Fecha incorporación a Biko": "08/01/2001",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "PATXI",
+    "Apellidos": "ESTEBAN FERNANDEZ",
+    "Equipo": "\n09 HELVETIA",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "22/11/2004",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "DIEGO",
+    "Apellidos": "FERNANDEZ HERNANDEZ",
+    "Equipo": "\n09 HELVETIA",
+    "Rol": "Product owner",
+    "Fecha incorporación a Biko": "2/11/2000",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "SANDRA",
+    "Apellidos": "FERNANDEZ",
+    "Equipo": "\n02 IMPLANTS",
+    "Rol": "Implant Cetelem",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "REBECA",
+    "Apellidos": "FLORES ETAYO",
+    "Equipo": "\n09 HELVETIA",
+    "Rol": "Helvetia (Marketing y Mantenimiento Web)",
+    "Fecha incorporación a Biko": "27/11/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MARTA",
+    "Apellidos": "FUERTES JIMENEZ",
+    "Equipo": "\n02 IMPLANTS",
+    "Rol": "Implant Cetelem",
+    "Fecha incorporación a Biko": "1/10/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ADRIANA",
+    "Apellidos": "GALDIZ ORUE",
+    "Equipo": "\n06 OOMPA LOOMPAS",
+    "Rol": "Implant Thyssen",
+    "Fecha incorporación a Biko": "01/01/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "DAVID",
+    "Apellidos": "GALLEGO VARELA",
+    "Equipo": "\n10 NATIONAL GEOGRAPHIC",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "16/08/2004",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MARCOS",
+    "Apellidos": "GALVEZ",
+    "Equipo": "\n05 FENIX",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "JUAN",
+    "Apellidos": "GARCIA ESPINAL",
+    "Equipo": "\n11 ECI",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "23/06/2005",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "CARMEN",
+    "Apellidos": "GARCIA LAPUENTE",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Product owner",
+    "Fecha incorporación a Biko": "15/09/1998",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "SAMUEL",
+    "Apellidos": "GARCIA NAVARRO",
+    "Equipo": "\n04 HAL9000",
+    "Rol": "Programador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MIKEL",
+    "Apellidos": "GARIN",
+    "Equipo": "\n07 ALL BLACKS",
+    "Rol": "Programador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "LUIS",
+    "Apellidos": "GIL SANCHEZ",
+    "Equipo": "13 OPENBANK",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "25/06/2007",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "JUANMIGUEL",
+    "Apellidos": "GOICOECHEA AVAROMA",
+    "Equipo": "12 ESTRUCTURA",
+    "Rol": "Sistemas",
+    "Fecha incorporación a Biko": "03/09/2007",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "SUSANA",
+    "Apellidos": "HEREDIA SANCHEZ",
+    "Equipo": "\n06 OOMPA LOOMPAS",
+    "Rol": "Consultor UX",
+    "Fecha incorporación a Biko": "01/04/2003",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "AITOR",
+    "Apellidos": "RESANO",
+    "Equipo": "\n04 HAL9000",
+    "Rol": "INVESTICC",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MIREN",
+    "Apellidos": "ARRESE",
+    "Equipo": "13 OPENBANK",
+    "Rol": "INVESTICC",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "KARLOS",
+    "Apellidos": "G LIBERAL",
+    "Equipo": "14 BIKOLABS",
+    "Rol": "INVESTICC",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "IRANTZU",
+    "Apellidos": "IBIRICU LASTERRA",
+    "Equipo": "12 ESTRUCTURA",
+    "Rol": "Comunicación",
+    "Fecha incorporación a Biko": "04/02/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MAITANE",
+    "Apellidos": "ITOIZ LLEIDA",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "24/09/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "AINHOA",
+    "Apellidos": "IZKUE URDANIZ, AINHOA",
+    "Equipo": "\n05 FENIX",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "XABIER",
+    "Apellidos": "JIMENEZ ARMENDARIZ",
+    "Equipo": "\n11 ECI",
+    "Rol": "Maquetación",
+    "Fecha incorporación a Biko": "29/05/2006",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "CARLOS",
+    "Apellidos": "JIMENEZ GONZALEZ",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Consultor UX",
+    "Fecha incorporación a Biko": "01/07/2004",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MAKSYM",
+    "Apellidos": "KOSENKO, MAKSYM",
+    "Equipo": "\n10 NATIONAL GEOGRAPHIC",
+    "Rol": "Desarrollador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ISMAEL",
+    "Apellidos": "LIBERAL DE LA PISA",
+    "Equipo": "13 OPENBANK",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "01/04/2016",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "JUAN JOSÉ",
+    "Apellidos": "LOPEZ ELIZALDE",
+    "Equipo": "\n06 OOMPA LOOMPAS",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "1/12/2008",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "FERNANDO",
+    "Apellidos": "MAGAN SEVIÑE",
+    "Equipo": "\n04 HAL9000",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "01/07/2004",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ISMAEL",
+    "Apellidos": "MARIJUAN RUIZ",
+    "Equipo": "\n08 LOS CURRIS",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "1/10/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "RAQUEL",
+    "Apellidos": "MARTINEZ DE ESPRONCEDA CAMARA",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Desarrollador",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "SILVIA",
+    "Apellidos": "MARTINEZ GOMEZ DE SEGURA",
+    "Equipo": "\n06 OOMPA LOOMPAS",
+    "Rol": "Diseño grafico",
+    "Fecha incorporación a Biko": "27/11/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "CARLOS",
+    "Apellidos": "MARTINEZ GONZALEZ",
+    "Equipo": "\n03 ZARA",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "1/10/2016",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "CARMELO",
+    "Apellidos": "MARTINEZ POBLET",
+    "Equipo": "\n11 ECI",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "27/06/2005",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "AITOR",
+    "Apellidos": "MARTINICORENA GOÑI",
+    "Equipo": "\n11 ECI",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "09/01/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MIGUEL",
+    "Apellidos": "MARZO ROJAS",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "20/03/2017",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ARITZ",
+    "Apellidos": "OIAGA EGUARAS",
+    "Equipo": "\n06 OOMPA LOOMPAS",
+    "Rol": "Diseño grafico",
+    "Fecha incorporación a Biko": "16/11/2007",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "PATRICIA",
+    "Apellidos": "OLLO LIBERAL",
+    "Equipo": "\n08 LOS CURRIS",
+    "Rol": "Maquetación",
+    "Fecha incorporación a Biko": "07/04/2003",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "BRUNO",
+    "Apellidos": "ORTEGA",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "09/07/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "SERGIO",
+    "Apellidos": "OSTA GRACIA",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "22/01/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MIKEL",
+    "Apellidos": "PARDO HITA",
+    "Equipo": "\n07 ALL BLACKS",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "23/10/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MELISSA",
+    "Apellidos": "PENABAD",
+    "Equipo": "\n02 IMPLANTS",
+    "Rol": "Implant Cetelem",
+    "Fecha incorporación a Biko": "28/03/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "SANTIAGO",
+    "Apellidos": "PEREZ PALACIO",
+    "Equipo": "\n04 HAL9000",
+    "Rol": "Consultor UX + Diseño",
+    "Fecha incorporación a Biko": "10/10/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "DIEGO",
+    "Apellidos": "RAZQUIN ELCANO",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "19/08/2019",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "AMAIA",
+    "Apellidos": "RESANO MELADO",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Consultor UX",
+    "Fecha incorporación a Biko": "20/02/2006",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "YOANA",
+    "Apellidos": "ROMANO VITAS",
+    "Equipo": "\n06 OOMPA LOOMPAS",
+    "Rol": "Product Owner",
+    "Fecha incorporación a Biko": "16/03/2005",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "BLANCA",
+    "Apellidos": "SANTESTEBAN PASCUAL",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "18/07/2016",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "Mª LUISA",
+    "Apellidos": "SANTOS PASCUALENA",
+    "Equipo": "\n03 ZARA",
+    "Rol": "Consultor UX",
+    "Fecha incorporación a Biko": "22/05/2006",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ALBERTO",
+    "Apellidos": "SILVA GAGO",
+    "Equipo": "\n10 NATIONAL GEOGRAPHIC",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "15/09/1998",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ARITZ",
+    "Apellidos": "SUESCUN SANCHEZ",
+    "Equipo": "12 ESTRUCTURA",
+    "Rol": "Director Operaciones",
+    "Fecha incorporación a Biko": "18/12/2006",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "ALBA",
+    "Apellidos": "TORRES",
+    "Equipo": "\n02 IMPLANTS",
+    "Rol": "Implant Cetelem",
+    "Fecha incorporación a Biko": "11/12/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "JAVIER",
+    "Apellidos": "URDAPILLETA  MAYAYO",
+    "Equipo": "\n11 ECI",
+    "Rol": "Product Owner",
+    "Fecha incorporación a Biko": "05/02/2007",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "YOANA",
+    "Apellidos": "URDIAIN ORDUÑA",
+    "Equipo": "\n01 BOLA8",
+    "Rol": "Product Owner",
+    "Fecha incorporación a Biko": "12/10/2000",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "AITOR",
+    "Apellidos": "URRUTIA ARAMBURU",
+    "Equipo": "\n05 FENIX",
+    "Rol": "Desarrollador",
+    "Fecha incorporación a Biko": "1/10/2018",
+    "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
+  },
+  {
+    "Nombre": "MARILUZ",
+    "Apellidos": "VAZQUEZ VAZQUEZ",
+    "Equipo": "12 ESTRUCTURA",
+    "Rol": "Administración",
+    "Fecha incorporación a Biko": "07/05/2018",
     "imgUrl": "https://t4.ftcdn.net/jpg/02/60/78/83/360_F_260788352_x5sSHM4DGvpjHj9wz8sFltzAPktQwJCj.jpg"
   }
 ]
