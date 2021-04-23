@@ -26,29 +26,49 @@ function DetallesForm({ location }: any) {
 
             <p className="card-text">
               <small className="text-muted">
-                <span className="pr-3">
-                  {" "}
-                  <FontAwesomeIcon icon={faRocket} />{" "}
+                <span className="pr-2">
+                  <FontAwesomeIcon icon={faRocket} />
+                </span>
+
+                <span className="pr-4">
                   <strong>{persona["Equipo"]}</strong>
                 </span>
-                <FontAwesomeIcon icon={faCalendar} />
-                Desde <strong>{persona["Fecha incorporación a Biko"]}</strong>
+
+                <span className="pr-2">
+                  <FontAwesomeIcon icon={faCalendar} />
+                </span>
+
+                <span className="pr-2">
+                  Desde <strong>{persona["Fecha incorporación a Biko"]}</strong>
+                </span>
               </small>
             </p>
 
-            <span id="roundedCircle">
-              <p id="redCircleContent"> react </p>
-            </span>
-            <span id="roundedCircle">
-              <p id="redCircleContent"> symphony </p>
-            </span>
-            <span id="roundedCircle">
-              <p id="redCircleContent"> drupal </p>
-            </span>
-            <span id="roundedCircle">
-              <p id="redCircleContent"> componetización </p>
-            </span>
-
+            <div>
+              <div className="row">
+                <div className="m-2">
+                  <span id="roundedCircle">
+                    <p id="redCircleContent"> react </p>
+                  </span>
+                </div>
+                <div className="m-2">
+                  <span id="roundedCircle">
+                    <p id="redCircleContent"> symphony </p>
+                  </span>
+                </div>
+                <div className="m-2">
+                  <span id="roundedCircle">
+                    <p id="redCircleContent"> drupal </p>
+                  </span>
+                </div>
+                <div className="m-2">
+                  <span id="roundedCircle">
+                    <p id="redCircleContent"> componetización </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <br />
             <div style={{ width: "900px" }}>
               <p className="card-text" id="montserrat">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec

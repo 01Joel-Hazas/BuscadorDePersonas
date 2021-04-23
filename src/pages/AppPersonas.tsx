@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/cardHover.css";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
@@ -118,6 +118,15 @@ function PersonaForm() {
 
   return (
     <div className="container">
+      <div>
+        <p className="text-center" id="redParagraph">
+          (lorem ipsum dolor set)
+        </p>
+        <p className="text-center" id="normalParagraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae
+          pretium tellus.
+        </p>
+      </div>
       <div className="input-group">
         <input
           type="text"
