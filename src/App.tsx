@@ -3,6 +3,7 @@ import DetallesForm from "./pages/DetallesPersonas";
 import Menu from "./pages/Menu";
 import "./styles/styles.css";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
+
 function App() {
   return (
     <BrowserRouter>

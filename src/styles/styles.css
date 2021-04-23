@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
 #logo {
   position: absolute;
   width: 120px;
@@ -6,14 +9,12 @@
   top: 32px;
 }
 #header {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 65.76px;
   line-height: 80px;
-
   color: #132631;
-
   flex: none;
   order: 0;
   align-self: stretch;
@@ -21,15 +22,23 @@
   margin: 24px 0px;
 }
 
+#montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 #redParagraph {
-  font-family: Courier Prime;
+  font-family: "Courier Prime", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 22.781px;
   line-height: 32px;
-
   color: #e73f39;
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -37,17 +46,50 @@
 }
 
 #normalParagraph {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 22.7812px;
   line-height: 32px;
-
   color: #132631;
-
   flex: none;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
   margin: 24px 0px;
+}
+
+#roundedCircle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 12px;
+  position: static;
+  width: 56px;
+  height: 32px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  border: 1px solid #e73f39;
+  box-sizing: border-box;
+  border-radius: 29px;
+}
+
+#redCircleContent {
+  position: static;
+  width: 32px;
+  height: 28px;
+  left: 12px;
+  top: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12.6px;
+  line-height: 28px;
+  color: #e73f39;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px;
 }

@@ -1,10 +1,13 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Logo from "../images/logoBiko.png";
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
     <div>
-      <img src={Logo} className="mx-auto" alt="..." id="logo" />
+      <Link to="/">
+        <img src={Logo} className="mx-auto" alt="..." id="logo" />
+      </Link>
 
       <h1 className="text-center" id="header">
         Busca Bikonianos
