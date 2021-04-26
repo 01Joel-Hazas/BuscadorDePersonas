@@ -19,10 +19,12 @@ function PersonaForm() {
     fetchData();
   }, []);
 
-  function filterSearchedData(searchData: any) {
+  function filterSearchedData(event: any) {
+    event.preventDefault();
+    let searchedData: any = event.target.elements.searchInput.value;
     let searchingPersons: any[] = [];
     personsData.map((person) => {
-      if (person["Nombre"].toString().toLowerCase().includes(searchData)) {
+      if (person["Nombre"].toString().toLowerCase().includes(searchedData)) {
         searchingPersons.push(person);
         setHasError(false);
         let errorItem: any = <p></p>;
@@ -127,17 +129,22 @@ function PersonaForm() {
           pretium tellus.
         </p>
       </div>
-      <div className="input-group">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Nombre Bikoniano"
-          onChange={(event) => {
-            filterSearchedData(event.target.value);
-          }}
-        />
-        <div className="input-group-append"></div>
-      </div>
+
+      <form onSubmit={filterSearchedData}>
+        <div className="input-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Nombre Bikoniano"
+            id="searchInput"
+          />
+          <span className="input-group-btn">
+            <button className="btn btn-danger" type="submit">
+              <i className="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+      </form>
       <br />
       <div className="row">
         <p id="errorMessage"> </p>
