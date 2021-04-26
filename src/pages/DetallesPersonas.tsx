@@ -6,6 +6,32 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
 function DetallesForm({ location }: any) {
   const persona = location.state.persona;
+  const todasLasPersonas: any[] = location.state.AllPersons;
+
+  function getPeopleOfTeam(equipo: any) {
+    return todasLasPersonas.map((person: any) => {
+      if (person["Equipo"].toString() == equipo) {
+        return (
+          <div className="col-sm-3">
+            <div className="card" style={{ width: "18rem" }}>
+              <img
+                src={person["imgUrl"]}
+                className="mx-auto"
+                alt="..."
+                style={{ width: "200px", height: "200px" }}
+              />
+              <div className="card-body">
+                <h6>{person["Nombre"]}</h6>
+                <h6>{person["Apellidos"]}</h6>
+                <p>{person["Rol"]}</p>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+  }
+
   return (
     <div style={{ margin: "0 auto" }}>
       <br />
@@ -122,7 +148,16 @@ function DetallesForm({ location }: any) {
           </div>
         </div>
       </div>
+      <p>
+        <i id="arrow-line"></i>
+      </p>
+      <p>
+        <i className="arrow down"></i>
+      </p>
       <br /> <br /> <br /> <br />
+      <br />
+      <br />
+      <br />
       <div className="container">
         <h1 id="HeaderDetails">Contamos en el blog</h1>
         <p id="redParagraph">(y mucho más que proyectos)</p>
@@ -207,34 +242,9 @@ function DetallesForm({ location }: any) {
       </div>
       <br /> <br />
       <div className="container">
-        <h1 id="HeaderDetails">Otra gente de Fenix</h1>
+        <h1 id="HeaderDetails">Otra gente de {persona["Equipo"]}</h1>
         <br />
-        <div className="row">
-          <div className="m-2">
-            <img
-              style={{ width: "200px", height: "200px" }}
-              src={persona["imgUrl"]}
-              alt="..."
-              className="img-fluid"
-            />
-          </div>
-          <div className="m-2">
-            <img
-              style={{ width: "200px", height: "200px" }}
-              src={persona["imgUrl"]}
-              alt="..."
-              className="img-fluid"
-            />
-          </div>
-          <div className="m-2">
-            <img
-              style={{ width: "200px", height: "200px" }}
-              src={persona["imgUrl"]}
-              alt="..."
-              className="img-fluid"
-            />
-          </div>
-        </div>
+        <div className="row"> {getPeopleOfTeam(persona["Equipo"])} </div>
       </div>
     </div>
   );

@@ -87,29 +87,49 @@
 }
 
 #HeaderDetails {
-  /* Servicios y tecnolog */
-
   position: static;
   width: 919px;
   height: 44px;
   left: calc(50% - 919px / 2);
   top: calc(50% - 44px / 2 - 24px);
-
-  /* Desktop/Heading2-primario */
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36.49px;
   line-height: 44px;
-  /* identical to box height, or 121% */
-
-  /* Biko/Neutros/Negro */
   color: #000000;
-
-  /* Inside Auto Layout */
   flex: none;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
   margin: 12px 0px;
+}
+
+#arrow-line {
+  position: absolute;
+  width: 92px;
+  height: 2px;
+  left: 230px;
+  top: 1050px;
+  background: #000000;
+  transform: rotate(90deg);
+}
+
+.arrow {
+  position: absolute;
+  border: solid black;
+  left: 272px;
+  top: 1090px;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#space {
+  line-height: 300px;
 }

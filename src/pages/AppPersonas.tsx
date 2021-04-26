@@ -60,7 +60,7 @@ function PersonaForm() {
                 <Link
                   to={{
                     pathname: "/DetallesPersonas",
-                    state: { persona: persona },
+                    state: { persona: persona, AllPersons: personsData },
                   }}
                 >
                   Detalles
@@ -103,7 +103,7 @@ function PersonaForm() {
                   <Link
                     to={{
                       pathname: "/DetallesPersonas",
-                      state: { persona: persona },
+                      state: { persona: persona, AllPersons: personsData },
                     }}
                   >
                     Detalles
