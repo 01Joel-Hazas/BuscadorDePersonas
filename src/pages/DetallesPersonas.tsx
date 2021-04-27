@@ -7,10 +7,31 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 function DetallesForm({ location }: any) {
   const persona = location.state.persona;
   const todasLasPersonas: any[] = location.state.AllPersons;
+  let splitedAbility: any = persona["Habilidades"].split(",");
 
-  function getPeopleOfTeam(equipo: any) {
+  function showDateYear(date: any) {
+    let year: any = date.split("/", 3);
+    return year[2];
+  }
+
+  function getAbilities() {
+    return splitedAbility.map((ability: any) => {
+      return (
+        <div>
+          <div className="m-2">
+            <span id="roundedCircle">
+              <p id="redCircleContent"> {ability} </p>
+            </span>
+          </div>
+        </div>
+      );
+    });
+  }
+  function getPeopleOfAbilities() {
     return todasLasPersonas.map((person: any) => {
-      if (person["Equipo"].toString() == equipo) {
+      let Habilidades: string[] = person["Habilidades"].split(",");
+
+      if (Habilidades.indexOf(splitedAbility[0]) > -1 && person !== persona) {
         return (
           <div className="col-sm-3">
             <div className="card" style={{ width: "18rem" }}>
@@ -28,6 +49,34 @@ function DetallesForm({ location }: any) {
             </div>
           </div>
         );
+      } else {
+        return "";
+      }
+    });
+  }
+
+  function getPeopleOfTeam(equipo: any) {
+    return todasLasPersonas.map((person: any) => {
+      if (person["Equipo"].toString() === equipo && person !== persona) {
+        return (
+          <div className="col-sm-3">
+            <div className="card" style={{ width: "18rem" }}>
+              <img
+                src={person["imgUrl"]}
+                className="mx-auto"
+                alt="..."
+                style={{ width: "200px", height: "200px" }}
+              />
+              <div className="card-body">
+                <h6>{person["Nombre"]}</h6>
+                <h6>{person["Apellidos"]}</h6>
+                <p>{person["Rol"]}</p>
+              </div>
+            </div>
+          </div>
+        );
+      } else {
+        return "";
       }
     });
   }
@@ -65,88 +114,30 @@ function DetallesForm({ location }: any) {
                 </span>
 
                 <span className="pr-2">
-                  Desde <strong>{persona["Fecha incorporación a Biko"]}</strong>
+                  Desde
+                  <strong>
+                    {showDateYear(persona["Fecha incorporación a Biko"])}
+                  </strong>
                 </span>
               </small>
             </p>
 
             <div>
-              <div className="row">
-                <div className="m-2">
-                  <span id="roundedCircle">
-                    <p id="redCircleContent"> react </p>
-                  </span>
-                </div>
-                <div className="m-2">
-                  <span id="roundedCircle">
-                    <p id="redCircleContent"> symphony </p>
-                  </span>
-                </div>
-                <div className="m-2">
-                  <span id="roundedCircle">
-                    <p id="redCircleContent"> drupal </p>
-                  </span>
-                </div>
-                <div className="m-2">
-                  <span id="roundedCircle">
-                    <p id="redCircleContent"> componetización </p>
-                  </span>
-                </div>
-              </div>
+              <div className="row">{getAbilities()}</div>
             </div>
             <br />
             <div style={{ width: "900px" }}>
               <p className="card-text" id="montserrat">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                commodo nec lacus ut dignissim. Phasellus tempor pellentesque
-                ante, at blandit elit elementum congue. Sed semper velit quis
-                sagittis aliquet. Integer eget fermentum enim, sit amet
-                fermentum dolor. Sed lobortis nibh vitae ex interdum egestas.
-                Quisque commodo venenatis odio ac tristique. Vivamus imperdiet
-                faucibus maximus. Aenean laoreet massa in blandit lacinia.
+                {persona["Sobre mí"]}
               </p>
             </div>
           </div>
         </div>
       </div>
       <br />
-      <div className="container">
-        <h1 id="HeaderDetails"> Miembros de React</h1>
-        <br />
-        <div className="row">
-          <div className="m-2">
-            <img
-              style={{ width: "200px", height: "200px" }}
-              src={persona["imgUrl"]}
-              alt="..."
-              className="img-fluid"
-            />
-          </div>
-          <div className="m-2">
-            <img
-              style={{ width: "200px", height: "200px" }}
-              src={persona["imgUrl"]}
-              alt="..."
-              className="img-fluid"
-            />
-          </div>
-          <div className="m-2">
-            <img
-              style={{ width: "200px", height: "200px" }}
-              src={persona["imgUrl"]}
-              alt="..."
-              className="img-fluid"
-            />
-          </div>
-          <div className="m-2">
-            <img
-              style={{ width: "200px", height: "200px" }}
-              src={persona["imgUrl"]}
-              alt="..."
-              className="img-fluid"
-            />
-          </div>
-        </div>
+      <div className="container" style={{ marginTop: "5rem" }}>
+        <h1 id="HeaderDetails"> Miembros de {splitedAbility[0]}</h1>
+        <div className="row">{getPeopleOfAbilities()}</div>
       </div>
       <p>
         <i id="arrow-line"></i>
@@ -154,11 +145,7 @@ function DetallesForm({ location }: any) {
       <p>
         <i className="arrow down"></i>
       </p>
-      <br /> <br /> <br /> <br />
-      <br />
-      <br />
-      <br />
-      <div className="container">
+      <div className="container" style={{ marginTop: "10rem" }}>
         <h1 id="HeaderDetails">Contamos en el blog</h1>
         <p id="redParagraph">(y mucho más que proyectos)</p>
 

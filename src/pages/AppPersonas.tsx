@@ -23,7 +23,7 @@ function PersonaForm() {
     event.preventDefault();
     let searchedData: any = event.target.elements.searchInput.value;
     let searchingPersons: any[] = [];
-    personsData.map((person) => {
+    personsData.forEach((person) => {
       if (person["Nombre"].toString().toLowerCase().includes(searchedData)) {
         searchingPersons.push(person);
         setHasError(false);
