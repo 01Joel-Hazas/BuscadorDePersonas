@@ -3,10 +3,12 @@ import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function DetallesForm({ location }: any) {
   const persona = location.state.persona;
   const todasLasPersonas: any[] = location.state.AllPersons;
+  const [selectedAbility, SetSelectedAbility] = useState<string>("");
   let splitedAbility: any = persona["Habilidades"].split(",");
 
   function showDateYear(date: any) {
@@ -18,9 +20,9 @@ function DetallesForm({ location }: any) {
     return splitedAbility.map((ability: any) => {
       return (
         <div>
-          <div className="m-2">
+          <div onClick={() => SetSelectedAbility(ability)} className="m-2">
             <span id="roundedCircle">
-              <p id="redCircleContent"> {ability} </p>
+              <p>{ability}</p>
             </span>
           </div>
         </div>
@@ -31,7 +33,7 @@ function DetallesForm({ location }: any) {
     return todasLasPersonas.map((person: any) => {
       let Habilidades: string[] = person["Habilidades"].split(",");
 
-      if (Habilidades.indexOf(splitedAbility[0]) > -1 && person !== persona) {
+      if (Habilidades.indexOf(selectedAbility) > -1 && person !== persona) {
         return (
           <div className="col-sm-3">
             <div className="card" style={{ width: "18rem" }}>
@@ -136,7 +138,7 @@ function DetallesForm({ location }: any) {
       </div>
       <br />
       <div className="container" style={{ marginTop: "5rem" }}>
-        <h1 id="HeaderDetails"> Miembros de {splitedAbility[0]}</h1>
+        <h1 id="HeaderDetails"> Miembros de {selectedAbility}</h1>
         <div className="row">{getPeopleOfAbilities()}</div>
       </div>
       <p>

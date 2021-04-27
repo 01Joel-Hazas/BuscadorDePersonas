@@ -68,15 +68,17 @@
   border: 1px solid #e73f39;
   box-sizing: border-box;
   border-radius: 29px;
-}
-
-#redCircleContent {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
   line-height: 28px;
   color: #e73f39;
+}
+
+#roundedCircle:hover {
+  background: #cc2424;
+  color: #ffffff;
 }
 
 #blogText {
