@@ -21,9 +21,9 @@ function DetallesForm({ location }: any) {
       return (
         <div>
           <div onClick={() => SetSelectedAbility(ability)} className="m-2">
-            <span id="roundedCircle">
+            <button type="button" id="roundedCircle">
               <p>{ability}</p>
-            </span>
+            </button>
           </div>
         </div>
       );
@@ -118,7 +118,7 @@ function DetallesForm({ location }: any) {
                 <span className="pr-2">
                   Desde
                   <strong>
-                    {showDateYear(persona["Fecha incorporación a Biko"])}
+                    &nbsp;{showDateYear(persona["Fecha incorporación a Biko"])}
                   </strong>
                 </span>
               </small>
@@ -138,6 +138,7 @@ function DetallesForm({ location }: any) {
       </div>
       <br />
       <div className="container" style={{ marginTop: "5rem" }}>
+        <div id="background-1"> </div>
         <h1 id="HeaderDetails"> Miembros de {selectedAbility}</h1>
         <div className="row">{getPeopleOfAbilities()}</div>
       </div>

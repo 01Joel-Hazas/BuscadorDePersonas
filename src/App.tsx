@@ -1,8 +1,9 @@
 import PersonaForm from "./pages/AppPersonas";
 import DetallesForm from "./pages/DetallesPersonas";
 import Menu from "./pages/Menu";
+import ErrorComponent from "./pages/ErrorComponent";
 import "./styles/styles.css";
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch, Redirect } from "react-router-dom";
 
 function App() {
   return (
@@ -12,7 +13,11 @@ function App() {
         <header className="App-header">
           <Switch>
             <Route path="/" component={PersonaForm} exact />
-            <Route path="/DetallesPersonas" component={DetallesForm} exact />
+            <Switch>
+              <Route path="/DetallesPersonas" component={DetallesForm} exact />
+              <Route path="/404" component={ErrorComponent} />
+              <Redirect to="/404" />
+            </Switch>
           </Switch>
         </header>
       </div>

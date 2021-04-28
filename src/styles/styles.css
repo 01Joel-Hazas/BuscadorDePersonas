@@ -135,3 +135,12 @@
 #space {
   line-height: 300px;
 }
+
+#background-1 {
+  position: absolute;
+  width: 686px;
+  height: 537px;
+  left: 903px;
+  top: 600px;
+  background: url(../images/bg-pattern.png);
+}
