@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 
 function PersonaForm() {
-  const [personsData, setpersonsData] = useState<any[]>([]);
-  const [searchpersonsData, setSearchedPersonsData] = useState<any[]>([]);
+  const [AllPeopleData, setAllPeopleData] = useState<any[]>([]);
+  const [searchedPeopleData, setSearchedPeopleData] = useState<any[]>([]);
   const [hasError, setHasError] = useState(false);
   const [hasValue, setHasValue] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get("jsonPersona.json");
-      setpersonsData(data);
+      setAllPeopleData(data);
     };
     fetchData();
   }, []);
@@ -22,10 +22,10 @@ function PersonaForm() {
   function filterSearchedData(event: any) {
     event.preventDefault();
     let searchedData: any = event.target.elements.searchInput.value;
-    let searchingPersons: any[] = [];
-    personsData.forEach((person) => {
+    let searchingPeopleData: any[] = [];
+    AllPeopleData.forEach((person) => {
       if (person["Nombre"].toString().toLowerCase().includes(searchedData)) {
-        searchingPersons.push(person);
+        searchingPeopleData.push(person);
         setHasError(false);
         let errorItem: any = <p></p>;
         ReactDOM.render(errorItem, document.getElementById("errorMessage"));
@@ -33,45 +33,41 @@ function PersonaForm() {
       }
     });
 
-    if (searchingPersons.length === 0) {
+    if (searchingPeopleData.length === 0) {
       setHasError(true);
     }
 
-    setSearchedPersonsData(searchingPersons);
+    setSearchedPeopleData(searchingPeopleData);
   }
 
   function printAllPeople() {
-    let AllPersons: any = personsData.map((persona) => {
+    let AllPeople: any = AllPeopleData.map((person) => {
       return (
         <div className="col-sm-3">
-          <div className="card" style={{ width: "18rem" }}>
-            <img
-              src={persona["imgUrl"]}
-              className="mx-auto"
-              alt="..."
-              style={{ width: "200px", height: "200px" }}
-            />
+          <Link
+            to={{
+              pathname: "/DetallesPersonas",
+              state: { persona: person, AllPersons: AllPeopleData },
+            }}
+          >
+            <div className="card">
+              <img
+                src={person["imgUrl"]}
+                alt="..."
+                style={{ width: "200px", height: "200px" }}
+              />
 
-            <div className="card-body">
-              <h6>{persona["Nombre"]}</h6>
-              <h6>{persona["Apellidos"]}</h6>
-              <p>{persona["Rol"]}</p>
-              <div>
-                <Link
-                  to={{
-                    pathname: "/DetallesPersonas",
-                    state: { persona: persona, AllPersons: personsData },
-                  }}
-                >
-                  Detalles
-                </Link>
+              <div className="card-body">
+                <h6>{person["Nombre"]}</h6>
+                <h6>{person["Apellidos"]}</h6>
+                <p>{person["Rol"]}</p>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       );
     });
-    return AllPersons;
+    return AllPeople;
   }
 
   function showErrorMessage() {
@@ -84,26 +80,26 @@ function PersonaForm() {
     if (hasError) {
       showErrorMessage();
     } else {
-      let SearchedPeople: any = searchpersonsData.map((persona) => {
+      let SearchedPeople: any = searchedPeopleData.map((person) => {
         return (
           <div className="col-sm-3">
-            <div className="card" style={{ width: "18rem" }}>
+            <div className="card">
               <img
-                src={persona["imgUrl"]}
+                src={person["imgUrl"]}
                 className="mx-auto"
                 alt="..."
                 style={{ width: "200px", height: "200px" }}
               />
 
               <div className="card-body">
-                <h6>{persona["Nombre"]}</h6>
-                <h6>{persona["Apellidos"]}</h6>
-                <p>{persona["Rol"]}</p>
+                <h6>{person["Nombre"]}</h6>
+                <h6>{person["Apellidos"]}</h6>
+                <p>{person["Rol"]}</p>
                 <div>
                   <Link
                     to={{
                       pathname: "/DetallesPersonas",
-                      state: { persona: persona, AllPersons: personsData },
+                      state: { persona: person, AllPersons: AllPeopleData },
                     }}
                   >
                     Detalles
@@ -120,11 +116,14 @@ function PersonaForm() {
 
   return (
     <div className="container">
-      <div>
-        <p className="text-center" id="redParagraph">
+      <div style={{ marginTop: "20px" }}>
+        <br />
+        <br />
+        <h1 id="header">Busca Bikonianos</h1>
+        <p className="text-center" id="redParagraphPositioned">
           (lorem ipsum dolor set)
         </p>
-        <p className="text-center" id="normalParagraph">
+        <p style={{ marginTop: "50px" }} id="normalParagraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae
           pretium tellus.
         </p>
@@ -146,9 +145,11 @@ function PersonaForm() {
         </div>
       </form>
       <br />
-      <div className="row">
-        <p id="errorMessage"> </p>
-        {hasValue ? printSearchedPeople() : printAllPeople()}
+      <div className="container">
+        <div className="row mx-0">
+          <p id="errorMessage"> </p>
+          {hasValue ? printSearchedPeople() : printAllPeople()}
+        </div>
       </div>
     </div>
   );

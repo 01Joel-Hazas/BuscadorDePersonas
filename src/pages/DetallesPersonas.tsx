@@ -36,17 +36,16 @@ function DetallesForm({ location }: any) {
       if (Habilidades.indexOf(selectedAbility) > -1 && person !== persona) {
         return (
           <div className="col-sm-3">
-            <div className="card" style={{ width: "18rem" }}>
+            <div className="card">
               <img
-                src={person["imgUrl"]}
-                className="mx-auto"
+                src={persona["imgUrl"]}
                 alt="..."
                 style={{ width: "200px", height: "200px" }}
               />
               <div className="card-body">
-                <h6>{person["Nombre"]}</h6>
-                <h6>{person["Apellidos"]}</h6>
-                <p>{person["Rol"]}</p>
+                <h6>{persona["Nombre"]}</h6>
+                <h6>{persona["Apellidos"]}</h6>
+                <p>{persona["Rol"]}</p>
               </div>
             </div>
           </div>
@@ -62,17 +61,16 @@ function DetallesForm({ location }: any) {
       if (person["Equipo"].toString() === equipo && person !== persona) {
         return (
           <div className="col-sm-3">
-            <div className="card" style={{ width: "18rem" }}>
+            <div className="card">
               <img
-                src={person["imgUrl"]}
-                className="mx-auto"
+                src={persona["imgUrl"]}
                 alt="..."
                 style={{ width: "200px", height: "200px" }}
               />
               <div className="card-body">
-                <h6>{person["Nombre"]}</h6>
-                <h6>{person["Apellidos"]}</h6>
-                <p>{person["Rol"]}</p>
+                <h6>{persona["Nombre"]}</h6>
+                <h6>{persona["Apellidos"]}</h6>
+                <p>{persona["Rol"]}</p>
               </div>
             </div>
           </div>
@@ -84,9 +82,9 @@ function DetallesForm({ location }: any) {
   }
 
   return (
-    <div style={{ margin: "0 auto" }}>
+    <div style={{ marginTop: "20px" }}>
       <br />
-      <div className="row g-0">
+      <div className="row g-0" style={{ marginTop: "50px" }}>
         <div className="col-md-4">
           <img src={persona["imgUrl"]} alt="..." className="img-fluid" />
         </div>
@@ -102,7 +100,7 @@ function DetallesForm({ location }: any) {
             </p>
 
             <p className="card-text">
-              <small className="text-muted">
+              <small>
                 <span className="pr-2">
                   <FontAwesomeIcon icon={faRocket} />
                 </span>
@@ -130,7 +128,7 @@ function DetallesForm({ location }: any) {
             <br />
             <div style={{ width: "900px" }}>
               <p className="card-text" id="montserrat">
-                {persona["Sobre mí"]}
+                {persona["Sobre mi"]}
               </p>
             </div>
           </div>

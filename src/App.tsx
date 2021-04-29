@@ -8,7 +8,7 @@ import { Route, BrowserRouter, Switch, Redirect } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div>
         <Menu></Menu>
         <header className="App-header">
           <Switch>

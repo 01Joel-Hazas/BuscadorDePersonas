@@ -5,12 +5,17 @@
   position: absolute;
   width: 120px;
   height: 43.3px;
-  left: 144px;
-  top: 32px;
+  left: 290px;
 }
+
 #header {
+  position: static;
+  width: 684px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
   font-family: "Montserrat", sans-serif;
-  font-style: bold;
+  font-style: normal;
   font-weight: bold;
   font-size: 65.76px;
   line-height: 80px;
@@ -30,6 +35,24 @@
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+#redParagraphPositioned {
+  position: static;
+  width: 315px;
+  height: 32px;
+  left: 0px;
+  top: 104px;
+  font-family: "Courier Prime", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22.781px;
+  line-height: 32px;
+  color: #e73f39;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 24px 0px;
 }
 
 #redParagraph {
