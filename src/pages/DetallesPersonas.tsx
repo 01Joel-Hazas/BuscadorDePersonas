@@ -1,8 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRocket } from "@fortawesome/free-solid-svg-icons";
-import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { faRocket, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 function DetallesForm({ location }: any) {
@@ -38,14 +37,14 @@ function DetallesForm({ location }: any) {
           <div className="col-sm-3">
             <div className="card">
               <img
-                src={persona["imgUrl"]}
+                src={person["imgUrl"]}
                 alt="..."
                 style={{ width: "200px", height: "200px" }}
               />
               <div className="card-body">
-                <h6>{persona["Nombre"]}</h6>
-                <h6>{persona["Apellidos"]}</h6>
-                <p>{persona["Rol"]}</p>
+                <h6>{person["Nombre"]}</h6>
+                <h6>{person["Apellidos"]}</h6>
+                <p>{person["Rol"]}</p>
               </div>
             </div>
           </div>
@@ -63,14 +62,14 @@ function DetallesForm({ location }: any) {
           <div className="col-sm-3">
             <div className="card">
               <img
-                src={persona["imgUrl"]}
+                src={person["imgUrl"]}
                 alt="..."
                 style={{ width: "200px", height: "200px" }}
               />
               <div className="card-body">
-                <h6>{persona["Nombre"]}</h6>
-                <h6>{persona["Apellidos"]}</h6>
-                <p>{persona["Rol"]}</p>
+                <h6>{person["Nombre"]}</h6>
+                <h6>{person["Apellidos"]}</h6>
+                <p>{person["Rol"]}</p>
               </div>
             </div>
           </div>
@@ -86,7 +85,11 @@ function DetallesForm({ location }: any) {
       <br />
       <div className="row g-0" style={{ marginTop: "50px" }}>
         <div className="col-md-4">
-          <img src={persona["imgUrl"]} alt="..." className="img-fluid" />
+          <img
+            src={persona["imgUrl"]}
+            alt="..."
+            style={{ width: "500px", height: "500px" }}
+          />
         </div>
         <div className="col-md-8">
           <div className="card-body">

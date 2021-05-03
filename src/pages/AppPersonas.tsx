@@ -5,12 +5,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 
+let searchedPeopleData: any[] = [];
+
 function PersonaForm() {
   const [AllPeopleData, setAllPeopleData] = useState<any[]>([]);
-  const [searchedPeopleData, setSearchedPeopleData] = useState<any[]>([]);
   const [hasError, setHasError] = useState(false);
   const [hasValue, setHasValue] = useState(false);
-
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get("jsonPersona.json");
@@ -21,11 +21,16 @@ function PersonaForm() {
 
   function filterSearchedData(event: any) {
     event.preventDefault();
+    searchedPeopleData = [];
     let searchedData: any = event.target.elements.searchInput.value;
-    let searchingPeopleData: any[] = [];
     AllPeopleData.forEach((person) => {
-      if (person["Nombre"].toString().toLowerCase().includes(searchedData)) {
-        searchingPeopleData.push(person);
+      if (
+        person["Nombre"]
+          .toString()
+          .toLowerCase()
+          .includes(searchedData.toLowerCase())
+      ) {
+        searchedPeopleData.push(person);
         setHasError(false);
         let errorItem: any = <p></p>;
         ReactDOM.render(errorItem, document.getElementById("errorMessage"));
@@ -33,11 +38,9 @@ function PersonaForm() {
       }
     });
 
-    if (searchingPeopleData.length === 0) {
+    if (searchedPeopleData.length === 0) {
       setHasError(true);
     }
-
-    setSearchedPeopleData(searchingPeopleData);
   }
 
   function printAllPeople() {
@@ -80,33 +83,30 @@ function PersonaForm() {
     if (hasError) {
       showErrorMessage();
     } else {
-      let SearchedPeople: any = searchedPeopleData.map((person) => {
+      let SearchedPeople: any = searchedPeopleData.map((person: any) => {
         return (
           <div className="col-sm-3">
-            <div className="card">
-              <img
-                src={person["imgUrl"]}
-                className="mx-auto"
-                alt="..."
-                style={{ width: "200px", height: "200px" }}
-              />
+            <Link
+              to={{
+                pathname: "/DetallesPersonas",
+                state: { persona: person, AllPersons: AllPeopleData },
+              }}
+            >
+              <div className="card">
+                <img
+                  src={person["imgUrl"]}
+                  className="mx-auto"
+                  alt="..."
+                  style={{ width: "200px", height: "200px" }}
+                />
 
-              <div className="card-body">
-                <h6>{person["Nombre"]}</h6>
-                <h6>{person["Apellidos"]}</h6>
-                <p>{person["Rol"]}</p>
-                <div>
-                  <Link
-                    to={{
-                      pathname: "/DetallesPersonas",
-                      state: { persona: person, AllPersons: AllPeopleData },
-                    }}
-                  >
-                    Detalles
-                  </Link>
+                <div className="card-body">
+                  <h6>{person["Nombre"]}</h6>
+                  <h6>{person["Apellidos"]}</h6>
+                  <p>{person["Rol"]}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         );
       });
