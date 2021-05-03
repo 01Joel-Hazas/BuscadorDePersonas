@@ -5,14 +5,14 @@ import { faRocket, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 function DetallesForm({ location }: any) {
-  const persona = location.state.persona;
-  const todasLasPersonas: any[] = location.state.AllPersons;
+  const selectedPersonData = location.state.persona;
+  const allPeopleData: any[] = location.state.AllPersons;
   const [selectedAbility, SetSelectedAbility] = useState<string>("");
-  let splitedAbility: any = persona["Habilidades"].split(",");
+  let splitedAbility: any = selectedPersonData["Habilidades"].split(",");
 
   function showDateYear(date: any) {
-    let year: any = date.split("/", 3);
-    return year[2];
+    let splitedDate: any = date.split("/", 3);
+    return splitedDate[2];
   }
 
   function getAbilities() {
@@ -29,10 +29,13 @@ function DetallesForm({ location }: any) {
     });
   }
   function getPeopleOfAbilities() {
-    return todasLasPersonas.map((person: any) => {
-      let Habilidades: string[] = person["Habilidades"].split(",");
+    return allPeopleData.map((person: any) => {
+      let abilities: string[] = person["Habilidades"].split(",");
 
-      if (Habilidades.indexOf(selectedAbility) > -1 && person !== persona) {
+      if (
+        abilities.indexOf(selectedAbility) > -1 &&
+        person !== selectedPersonData
+      ) {
         return (
           <div className="col-sm-3">
             <div className="card">
@@ -56,8 +59,11 @@ function DetallesForm({ location }: any) {
   }
 
   function getPeopleOfTeam(equipo: any) {
-    return todasLasPersonas.map((person: any) => {
-      if (person["Equipo"].toString() === equipo && person !== persona) {
+    return allPeopleData.map((person: any) => {
+      if (
+        person["Equipo"].toString() === equipo &&
+        person !== selectedPersonData
+      ) {
         return (
           <div className="col-sm-3">
             <div className="card">
@@ -86,20 +92,20 @@ function DetallesForm({ location }: any) {
       <div className="row g-0" style={{ marginTop: "50px" }}>
         <div className="col-md-4">
           <img
-            src={persona["imgUrl"]}
+            src={selectedPersonData["imgUrl"]}
             alt="..."
             style={{ width: "500px", height: "500px" }}
           />
         </div>
         <div className="col-md-8">
           <div className="card-body">
-            <h1 className="card-title">{persona["Nombre"]}</h1>
+            <h1 className="card-title">{selectedPersonData["Nombre"]}</h1>
 
             <h1 className="card-title">
-              <strong> {persona["Apellidos"]} </strong>
+              <strong> {selectedPersonData["Apellidos"]} </strong>
             </h1>
             <p className="card-text" id="redParagraph">
-              ({persona["Rol"]})
+              ({selectedPersonData["Rol"]})
             </p>
 
             <p className="card-text">
@@ -109,7 +115,7 @@ function DetallesForm({ location }: any) {
                 </span>
 
                 <span className="pr-4">
-                  <strong>{persona["Equipo"]}</strong>
+                  <strong>{selectedPersonData["Equipo"]}</strong>
                 </span>
 
                 <span className="pr-2">
@@ -119,7 +125,10 @@ function DetallesForm({ location }: any) {
                 <span className="pr-2">
                   Desde
                   <strong>
-                    &nbsp;{showDateYear(persona["Fecha incorporación a Biko"])}
+                    &nbsp;
+                    {showDateYear(
+                      selectedPersonData["Fecha incorporación a Biko"]
+                    )}
                   </strong>
                 </span>
               </small>
@@ -131,7 +140,7 @@ function DetallesForm({ location }: any) {
             <br />
             <div style={{ width: "900px" }}>
               <p className="card-text" id="montserrat">
-                {persona["Sobre mi"]}
+                {selectedPersonData["Sobre mi"]}
               </p>
             </div>
           </div>
@@ -233,9 +242,12 @@ function DetallesForm({ location }: any) {
       </div>
       <br /> <br />
       <div className="container">
-        <h1 id="HeaderDetails">Otra gente de {persona["Equipo"]}</h1>
+        <h1 id="HeaderDetails">Otra gente de {selectedPersonData["Equipo"]}</h1>
         <br />
-        <div className="row"> {getPeopleOfTeam(persona["Equipo"])} </div>
+        <div className="row">
+          {" "}
+          {getPeopleOfTeam(selectedPersonData["Equipo"])}{" "}
+        </div>
       </div>
     </div>
   );
