@@ -4,13 +4,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
-
-let searchedPeopleData: any[] = [];
-
+let hasValue: boolean = false;
+let hasError: boolean = false;
 function PersonaForm() {
   const [AllPeopleData, setAllPeopleData] = useState<any[]>([]);
-  const [hasError, setHasError] = useState(false);
-  const [hasValue, setHasValue] = useState(false);
+  const [searchedInputValue, setSearchedInputValue] = useState("");
+
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get("jsonPersona.json");
@@ -21,26 +20,8 @@ function PersonaForm() {
 
   function filterSearchedData(event: any) {
     event.preventDefault();
-    searchedPeopleData = [];
-    let searchedData: any = event.target.elements.searchInput.value;
-    AllPeopleData.forEach((person) => {
-      if (
-        person["Nombre"]
-          .toString()
-          .toLowerCase()
-          .includes(searchedData.toLowerCase())
-      ) {
-        searchedPeopleData.push(person);
-        setHasError(false);
-        let errorItem: any = <p></p>;
-        ReactDOM.render(errorItem, document.getElementById("errorMessage"));
-        setHasValue(true);
-      }
-    });
-
-    if (searchedPeopleData.length === 0) {
-      setHasError(true);
-    }
+    setSearchedInputValue(event.target.elements.searchInput.value);
+    hasValue = true;
   }
 
   function printAllPeople() {
@@ -80,6 +61,25 @@ function PersonaForm() {
   }
 
   function printSearchedPeople() {
+    let searchedPeopleData: any[] = [];
+    AllPeopleData.forEach((person) => {
+      if (
+        person["Nombre"]
+          .toString()
+          .toLowerCase()
+          .includes(searchedInputValue.toLowerCase())
+      ) {
+        searchedPeopleData.push(person);
+        hasError = false;
+        let errorItem: any = <p></p>;
+        ReactDOM.render(errorItem, document.getElementById("errorMessage"));
+      }
+    });
+
+    if (searchedPeopleData.length === 0) {
+      hasError = true;
+    }
+
     if (hasError) {
       showErrorMessage();
     } else {
