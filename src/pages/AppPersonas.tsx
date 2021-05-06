@@ -5,7 +5,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 let hasValue: boolean = false;
-let hasError: boolean = false;
 function PersonaForm() {
   const [AllPeopleData, setAllPeopleData] = useState<any[]>([]);
   const [searchedInputValue, setSearchedInputValue] = useState("");
@@ -70,48 +69,44 @@ function PersonaForm() {
           .includes(searchedInputValue.toLowerCase())
       ) {
         searchedPeopleData.push(person);
-        hasError = false;
-        let errorItem: any = <p></p>;
-        ReactDOM.render(errorItem, document.getElementById("errorMessage"));
       }
     });
 
     if (searchedPeopleData.length === 0) {
-      hasError = true;
-    }
-
-    if (hasError) {
       showErrorMessage();
     } else {
-      let SearchedPeople: any = searchedPeopleData.map((person: any) => {
-        return (
-          <div className="col-sm-3">
-            <Link
-              to={{
-                pathname: "/DetallesPersonas",
-                state: { persona: person, AllPersons: AllPeopleData },
-              }}
-            >
-              <div className="card">
-                <img
-                  src={person["imgUrl"]}
-                  className="mx-auto"
-                  alt="..."
-                  style={{ width: "200px", height: "200px" }}
-                />
-
-                <div className="card-body">
-                  <h6>{person["Nombre"]}</h6>
-                  <h6>{person["Apellidos"]}</h6>
-                  <p>{person["Rol"]}</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-        );
-      });
-      return SearchedPeople;
+      let errorItem: any = <p></p>;
+      ReactDOM.render(errorItem, document.getElementById("errorMessage"));
     }
+
+    let SearchedPeople: any = searchedPeopleData.map((person: any) => {
+      return (
+        <div className="col-sm-3">
+          <Link
+            to={{
+              pathname: "/DetallesPersonas",
+              state: { persona: person, AllPersons: AllPeopleData },
+            }}
+          >
+            <div className="card">
+              <img
+                src={person["imgUrl"]}
+                className="mx-auto"
+                alt="..."
+                style={{ width: "200px", height: "200px" }}
+              />
+
+              <div className="card-body">
+                <h6>{person["Nombre"]}</h6>
+                <h6>{person["Apellidos"]}</h6>
+                <p>{person["Rol"]}</p>
+              </div>
+            </div>
+          </Link>
+        </div>
+      );
+    });
+    return SearchedPeople;
   }
 
   return (
