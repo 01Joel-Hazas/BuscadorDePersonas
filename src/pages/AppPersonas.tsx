@@ -3,8 +3,8 @@ import "../styles/cardHover.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import ReactDOM from "react-dom";
-let hasValue: boolean = false;
+let errorMessage = "";
+
 function PersonaForm() {
   const [AllPeopleData, setAllPeopleData] = useState<any[]>([]);
   const [searchedInputValue, setSearchedInputValue] = useState("");
@@ -20,7 +20,6 @@ function PersonaForm() {
   function filterSearchedData(event: any) {
     event.preventDefault();
     setSearchedInputValue(event.target.elements.searchInput.value);
-    hasValue = true;
   }
 
   function printAllPeople() {
@@ -54,13 +53,15 @@ function PersonaForm() {
   }
 
   function showErrorMessage() {
-    let errorMessage = "No se ha encontrado ningúna persona con ese criterio";
-    let errorItem: any = <p>{errorMessage}</p>;
-    ReactDOM.render(errorItem, document.getElementById("errorMessage"));
+    errorMessage = "No se ha encontrado ningúna persona con ese criterio";
   }
 
   function printSearchedPeople() {
+    if (searchedInputValue === "") {
+      printAllPeople();
+    }
     let searchedPeopleData: any[] = [];
+
     AllPeopleData.forEach((person) => {
       if (
         person["Nombre"]
@@ -75,8 +76,7 @@ function PersonaForm() {
     if (searchedPeopleData.length === 0) {
       showErrorMessage();
     } else {
-      let errorItem: any = <p></p>;
-      ReactDOM.render(errorItem, document.getElementById("errorMessage"));
+      errorMessage = "";
     }
 
     let SearchedPeople: any = searchedPeopleData.map((person: any) => {
@@ -142,8 +142,8 @@ function PersonaForm() {
       <br />
       <div className="container">
         <div className="row mx-0">
-          <p id="errorMessage"> </p>
-          {hasValue ? printSearchedPeople() : printAllPeople()}
+          <p id="errorMessage"> {errorMessage} </p>
+          {printSearchedPeople()}
         </div>
       </div>
     </div>
